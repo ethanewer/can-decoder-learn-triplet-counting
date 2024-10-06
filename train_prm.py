@@ -22,8 +22,8 @@ class PRMDataset(data.Dataset):
     def __init__(self, config: Config, split: Literal["train", "val", "test"]) -> None:
         data_path = f"{config.data_dir}/{split}.npz"
         data = np.load(data_path)
-        self.x = torch.from_numpy(data["x"] + 1)  # type: ignore
-        self.y = torch.from_numpy(data["y"])  # type: ignore
+        self.x = torch.from_numpy(data["x"] + 1).long()  # type: ignore
+        self.y = torch.from_numpy(data["y"]).long()  # type: ignore
         self.mask = torch.any(self.y != -1, dim=0)
 
     def __len__(self) -> int:
