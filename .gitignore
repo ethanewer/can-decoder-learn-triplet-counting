@@ -1,0 +1,9 @@
+__pycache__/
+.vscode/
+.ipynb_checkpoints
+*wandb
+models/*.pt
+*.ipynb
+*.DS_Store
+data/*/train.npz
+data/*/val.npz

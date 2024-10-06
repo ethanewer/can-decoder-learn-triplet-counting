@@ -1,0 +1,15 @@
+{
+    "task": "prm", 
+    "data_dir": "data/prm",
+    "warmup_iters": 100,
+    "max_iters": 10000,
+    "lr_decay_iters": 10000, 
+    "block_size": 64, 
+    "batch_size": 64,
+    "eval_interval": 500, 
+    "n_layer": 8, 
+    "n_head": 4, 
+    "n_embd": 256, 
+    "name": "prm", 
+    "seed": 0
+}
